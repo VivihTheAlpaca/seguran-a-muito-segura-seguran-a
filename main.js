@@ -36,29 +36,44 @@ const simbolos = '!@%*?#¨&+-.';
 function geraSenha(){
     let alfabeto = '';
 
-    if (checkbox[0].checked){
-        alfabeto += letrasMaiusculas;
-    }
-    if (checkbox[1].checked){
-        alfabeto += letrasMinusculas;
-    }
-    if (checkbox[2].checked){
-        alfabeto += numeros;
-    }
-    if (checkbox[3].checked){
-        alfabeto += simbolos;
-    }
+   let alfabeto = " ",
+if (checkbox [0].checked) {
+senha += letrasMaiusculas [
+math.floor (math.random () * letrasMaiusculas.lenght ) 
+];
+};
 
-    if (alfabeto.length === 0) {
-        campoSenha.value = '';
-        return;
-    }
+    let senha = " ",
+if (checkbox[1].checked) {
+senha += letrasMinusculas [
+math.floor (math.random () * letrasMinusculas.lenght ) 
+];
+};
+
+    let senha = " ",
+if (checkbox[2].checked) {
+senha += numeros [
+math.floor(math.random () * numeros.lenght ) 
+];
+};
+
+    let senha = " ",
+if (checkbox[3].checked) {
+senha += simbolos [
+math.floor (math.random () * simbolos.lenght ) 
+];
+};
+
+
 
     let senha = '';
     for (let i = 0; i < tamanhoSenha; i++){
         let numeroAleatorio = Math.floor(Math.random() * alfabeto.length);
         senha += alfabeto[numeroAleatorio];
     }
+
+   
+          
 
     campoSenha.value = senha;
 }
